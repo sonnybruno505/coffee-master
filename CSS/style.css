@@ -1,0 +1,529 @@
+
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #38291f;
+    font-family: Georgia, serif;
+}
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    padding: 20px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f5f1e8;
+}
+
+.logo h1 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: #493326;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #493326;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #a47750;
+}
+
+/* ==========================
+   APRESENTAÇÃO
+========================== */
+
+
+.hero {
+    min-height: 360px;
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(35, 24, 17, 0.25),
+            rgba(35, 24, 17, 0.25)
+        ),
+        url("../assets/img/cafe-principal.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-content {
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+
+    background-color: #e8d8c0;
+    color: #38291f;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* ==========================
+   CARDÁPIO
+========================== */
+
+.cardapio {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.cardapio h2,
+.sobre h2,
+.contato h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+/* ==========================
+   SOBRE
+========================== */
+
+.sobre {
+    padding: 80px 15%;
+    text-align: center;
+    background-color: #eae1d3;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   CONTATO
+========================== */
+
+.contato {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+.footer {
+    padding: 25px;
+    text-align: center;
+
+    background-color: #38291f;
+    color: #f5f1e8;
+
+    font-size: 14px;
+}
+
+/* ==========================
+   CARDS DE CAFÉ
+========================== */
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.cafe-card {
+    background-color: #fffdf9;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.cafe-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.cafe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.cafe-info {
+    padding: 22px;
+}
+
+.cafe-info h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.cafe-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #77685b;
+    margin-bottom: 18px;
+}
+
+.cafe-info span {
+    font-size: 17px;
+    font-weight: bold;
+    color: #765238;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    .header {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    /* BANNER */
+
+    .hero {
+        min-height: 350px;
+        padding: 45px 7%;
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* CARDÁPIO */
+
+    .cardapio {
+        padding: 55px 6%;
+    }
+
+    .cardapio h2,
+    .sobre h2,
+    .contato h2 {
+        font-size: 28px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cafe-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 55px 8%;
+    }
+
+    .sobre p {
+        font-size: 15px;
+    }
+
+    /* CONTATO */
+
+    .contato {
+        padding: 55px 6%;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+  .hero {
+    min-height: 300px;
+    padding: 35px 7%;
+
+    background-size: cover;
+    background-position: 72% center;
+    background-repeat: no-repeat;
+}
+}
+
+/* ==========================
+   HISTÓRIA DO CAFÉ
+========================== */
+
+.sobre-conteudo {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.sobre-subtitulo {
+    display: block;
+    color: #927252;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.sobre-introducao {
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.historia-cafe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    text-align: left;
+}
+
+.historia-item {
+    padding: 25px;
+    background-color: #f5f1e8;
+}
+
+.historia-item h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #493326;
+}
+
+.historia-item p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #77685b;
+}
+
+/* HISTÓRIA NO CELULAR */
+
+@media (max-width: 768px) {
+
+    .historia-cafe {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .historia-item {
+        padding: 22px;
+    }
+
+}
+
+/* MÉTODOS DE PREPARO */
+
+.metodos {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #f5f1e8;
+}
+
+.metodos-subtitulo {
+    display: block;
+    color: #927252;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.metodos h2 {
+    font-size: 36px;
+    color: #493326;
+    margin-bottom: 20px;
+}
+
+.metodos-introducao {
+    color: #77685b;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.metodos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.metodo-card {
+    background-color: #fffdf9;
+    padding: 35px 25px;
+    text-align: left;
+    border-bottom: 3px solid #927252;
+    transition: 0.3s;
+}
+
+.metodo-card:hover {
+    transform: translateY(-5px);
+}
+
+.metodo-card h3 {
+    color: #493326;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.metodo-card p {
+    color: #77685b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .metodos {
+        padding: 55px 6%;
+    }
+
+    .metodos h2 {
+        font-size: 28px;
+    }
+
+    .metodos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .metodo-card {
+        padding: 25px;
+    }
+}
+
+.metodo-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 22px;
+}
+
+/* FILTROS DO CARDÁPIO */
+
+.filtros-cardapio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.filtro {
+    padding: 12px 24px;
+    border: 1px solid #927252;
+    background-color: transparent;
+    color: #493326;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    background-color: #493326;
+    color: #fffdf9;
+}
+
+@media (max-width: 480px) {
+    .filtros-cardapio {
+        gap: 10px;
+    }
+
+    .filtro {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
